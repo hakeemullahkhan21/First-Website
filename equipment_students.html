@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Student Form</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="js/chart.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/equipment_students.css">
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li>
+			  <a href="home.html">Students<span class="caret"></span></a>
+					<div>
+						<ul>
+							<li><a href="equipment_students.html">Equipment Form</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+			  <a href="home.html">Faculty<span class="caret"></span></a>
+					<div>
+						<ul>
+							<li><a href="AV_Assist.html">AV_Assist</a></li>
+							<li><a href="video_form.html">Video Request</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="Student_Aids_Schedule.html">Student Aid schedule</a></li>
+			</ul>
+		</nav>
+		
+		<h1 id="Student">Student Equipment Loan Form</h1>
+		
+		<!-- Collapsible panel -->
+		<div class="container">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+					<h4 class="panel-title">
+					  <a class="title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Instructions</a>
+					</h4>
+				  </div>
+					<div id="collapse1" class="panel-collapse collapse in">
+						<div id="para">
+						<p>Students enrolled in any of the Communication, Media and Theatre production courses are allowed access to a number of audio/visual equipment
+						   that Media Services provides.</p>
+						
+						<p><b>Equipment Rental Rules:</b></p>
+							
+							<ul>
+									<li>Must be requested 24 hours in advance from the time of pick-up</li>
+									<li>Must be returned on time</li>
+									<li>Weekday rentals are only for 1 day</li>
+									<li>Weekend rentals are for 3 days: Friday pick-up with a Monday drop-off</li>
+									<li>The requester shall be the only person to pick up or drop off the equipment</li>
+						
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+					<h4 class="panel-title">
+					  <a class="title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Check Availability</a>
+					</h4>
+				  </div>
+					<div id="collapse2" class="panel-collapse collapse in">
+						<div id="container" style="min-width: 1px; height: 400px; max-width: 600px; text-align=right;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div id="pageBlock">
+	
+				<form>					
+					<label for ="firstname">First Name:</label>
+					<input type="text" name="fname" id="firstname" required pattern="[a-zA-Z]+"
+						oninvalid="setCustomValidity('Please match the requested format: Only letters allowed')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+				
+					<label for ="lastname">Last Name:</label>
+					<input type="text" name="lname" id="lastname" required pattern="[a-zA-Z]+"
+						oninvalid="setCustomValidity('Please match the requested format: Only letters allowed')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+				
+					<label for="phone">Phone Number:</label>
+					<input type="text" name="phone" id="phone" required pattern = "\d{3}[\-]\d{3}[\-]\d{4}?" placeholder ="999-999-9999"
+						oninvalid="setCustomValidity('Please match the requested format: 999-999-9999')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+					<label for="email">Email Address:</label>
+					<input type="email" name="email" id="email" required placeholder="xyz@example.com"><br><br>
+				
+					<label for="neiuID">NEIU ID #:</label>
+					<input type="text" name="neiuID" id="neiuID" required pattern = "\d{7}?" placeholder="1234567"
+						oninvalid="setCustomValidity('Please match the requested format: 1234567')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+				
+					<label for ="date">Pick-up Date:</label> 
+					<input type="date" name="date" id ="date" required ><br><br>
+				
+					<label for ="time">Pick-up Time:</label> 
+					<input type="time" name="time" id="time" required><br><br>
+				
+					<label for ="datein">Return Date:</label> 
+					<input type="date" name="date" id="datein" required ><br><br>
+				
+					<label for ="timein">Return Time:</label> 
+					<input type="time" name="time" id="timein" required><br><br>
+				
+					<label for ="coursename">Course Name:</label>
+					<input type="text" name="coursename" id="coursename" required placeholder="CMT 300"><br><br>
+					
+					<label for ="professorname">Professor Name:</label>
+					<input type="text" name="professorname" id="professorname" required><br><br>
+					
+					<br><span id="comments">Comments:</span>
+					<textarea name="notes" cols="50" rows="6" placeholder="Please enter additional information here"></textarea><br><br>
+					<input type="submit" value="Submit" id="submit">
+					<input type="reset" value="Reset" id="reset">
+				</form>
+		</div>		
+	</body>
+</html>

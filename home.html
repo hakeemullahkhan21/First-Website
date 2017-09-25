@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MEDIA SERVICES</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+				<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jqueryui.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li>
+			  <a href="home.html">Students<span class="caret"></span></a>
+					<div>
+						<ul>
+							<li><a href="equipment_students.html">Equipment Form</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+			  <a href="home.html">Faculty<span class="caret"></span></a>
+					<div>
+						<ul>
+							<li><a href="AV_Assist.html">AV_Assist</a></li>
+							<li><a href="video_form.html">Video Request</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="Student_Aids_Schedule.html">Student Aid schedule</a></li>
+			</ul>
+		</nav>
+
+		<div id="pageBlock">
+					<table>
+						<tr>
+							<td>
+								<div id = "about">
+								<p>Welcome to the <b>NEIU Media Services Department</b> Website. This website will provide information about the following services:</p><br>
+								
+								<ul>
+									<li>Equipment loan outs for NEIU faculty and CMT (Communication, Media and Theatre) students. Equipment loan outs 
+										include cameras, projectors, audio recording devices, and lighting kits for cameras. 
+									</li>
+									<li>Video recordings for classrooms and events. Classroom recordings are student presentations and event recordings are only for NEIU-related events.</li>
+									<li>Audio/visual (AV) problems with projectors in the classroom.</li>
+								</ul>
+								</div>
+							</td>
+							
+							<td>
+								<div id="banner">
+									<img id = "slide" src = "images/mps_logo.jpg"  alt = "Images" height = "400" width = "600"> 
+								</div>
+							</td>
+							
+							<td>
+								<div id="office_info">
+								<aside>
+									<h2>Office Hours</h2>
+								 
+										<p>
+										<strong>Monday - Friday: </strong><br>
+										<strong>8:00 AM - 10:00 PM</strong><br>
+										<strong>Saturday: </strong><br>
+										<strong>8:00 AM - 5:00 PM</strong><br>
+										<strong>Sunday:&nbsp; </strong><span>CLOSED</span>
+										</p><br><br>
+
+									<h2>Contact Information</h2>
+								
+										<p>NEIU MEDIA SERVICES</p>
+										<p>5500 North St. Louis Avenue<br>
+										Chicago, Illinois<br>
+										60625-4699<br>
+										Phone: 773-442-5060</p>
+								</aside>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<script type="text/javascript">
+
+					var image1=new Image()
+					image1.src="images/mps_logo.jpg"
+					var image2=new Image()
+					image2.src="images/neiu_logo.png"
+					var image3=new Image()
+					image3.src="images/home.jpg"
+					var image4=new Image()
+					image4.src="images/music.jpg"
+					var image5=new Image()
+					image5.src="images/piano.jpg"
+		
+					var step=1
+					function slideit()
+					{
+						document.images.slide.src=eval("image"+ step + ".src")
+						if(step<5)
+							step++;
+						else
+							step = 1;
+						setTimeout("slideit()",2500)
+					}
+					slideit()
+
+				</script>
+		</body>
+</html>
+
+	

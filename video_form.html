@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Video Form</title>
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/video_Form.css">
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li>
+			  <a href="home.html">Students<span class="caret"></span></a>
+					<div>
+						<ul>
+							<li><a href="equipment_students.html">Equipment Form</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+			  <a href="home.html">Faculty<span class="caret"></span></a>
+					<div>
+						<ul>
+							<li><a href="AV_Assist.html">AV_Assist</a></li>
+							<li><a href="video_form.html">Video Request</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="Student_Aids_Schedule.html">Student Aid schedule</a></li>
+			</ul>
+		</nav>
+	
+		<h1 id="vidRecForm"> Video Recording Form </h1><br>
+		<!-- Collapsible panel -->
+		<div class="container">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+				<h4 class="panel-title">
+				  <a class="title" data-toggle="collapse" data-parent="#accordion" href="#collapse">Instructions</a>
+				</h4>
+			  </div>
+					<div id="collapse" class="panel-collapse collapse in">
+						<div id="paraForm">
+						<p>Do you have an upcoming event that you would like to be recorded? If so, contact the Media Services department.</p><br>
+							<ul>
+								<li>We offer courtesy videography services to faculty and staff of the university community.</li>
+								<li>We specialize in recording campus wide events, as well as, classroom presentations.</li>
+							</ul><br>
+							<p><strong>We do not provide photographers.</strong></p><br><br>
+						</div>	
+					</div>
+				</div>
+		</div>
+		
+		<form> 
+			<label for="fname">First name:</label>
+			<input type="text" name="fname" id="fname" required pattern="[a-zA-Z]+"
+						oninvalid="setCustomValidity('Please match the requested format: Only letters allowed')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+		
+			<label for="lname">Last name:</label>
+			<input type="text" name="lname" id="lname" required pattern="[a-zA-Z]+"
+						oninvalid="setCustomValidity('Please match the requested format: Only letters allowed')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+			
+			<label for="phone">Number to contact:</label>
+			<input type="text" name="phone" id="phone" required placeholder ="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]\d{4}?"
+						oninvalid="setCustomValidity('Please match the requested format: 999-999-9999')"
+						onchange="try{setCustomValidity('')}catch(e){}"><br><br>
+			
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required placeholder="xyz@example.com"><br><br>
+			
+			<label for="Date">Date of recording:</label>
+			<input type="date" name="date" id="Date" required ><br><br>
+			
+			<label for="Time">Time of recording:</label>
+			<input type="time" name="time" id="Time" required><br><br>
+			
+			<label for="recordLocation">Location of recording:</label>
+			<input type="text" name="recordLocation" id="recordLocation" required ><br><br>
+			
+			<label for="editing">Editing needed:</label>
+			<input type="radio" name="question" value="yes" id="editing">Yes
+			<input type="radio" name="question" value="no" id="editingOne" >No<br><br>
+			
+			<label for="label">DVD label:</label> 
+			<input type="text" name="label" id="label" placeholder="No labels for classroom REC" required ><br><br>
+			
+			<label for="numCopies">Number of copies:</label>
+			<input type="text" name="numCopies" id="numCopies" required pattern ="[0-9]" ><br><br>
+			
+			<label for="formatType">Format type:</label>
+			<input type="text" name="formatType" id="formatType" required placeholder ="DVD or Flash or Both"><br><br>
+			
+			<br><span id="comments"> Comments: </span>
+			<textarea name="notes" cols="50" rows="6" placeholder="Please enter additional information here">
+		    </textarea><br><br><br><br>
+	
+			<div id="buttons">
+				<input type="submit" id="submit" value="Submit">
+				<input type="reset" id="reset" value="Reset"><br>
+			</div>
+		
+		</form>
+	</body>
+</html>

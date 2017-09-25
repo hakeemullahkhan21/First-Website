@@ -1,0 +1,77 @@
+#pageBlock {
+	width: 100%; 
+	margin: 0 auto;
+}
+label {
+     font-weight: bold;
+     float: left;
+	 width: 9em;
+	 text-align: right;
+	 padding-right: 1em;
+	 padding-left: 2em;
+      }
+	
+#submit {
+ 	   margin-top: 0.5em;
+       margin-left: 14em;
+		
+	}
+
+#reset {
+     margin-top: 0.5em;
+		
+       }
+
+fieldset {
+	    margin-top: 2em;
+	    margin-right: 50em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+	}
+
+legend {
+	    text-align: center;
+		font-weight: bold;
+	}
+#Student{
+	border-bottom: 2px solid #2554C7;
+	text-align: center;
+	padding-top:10px;
+}
+#comments {
+	float: left;
+	width: 11em;
+	margin-left: 0%;
+	text-align: right;
+	font-weight:bold;}
+
+
+#submit {
+	margin-top: 4em;
+	background-color: yellow;
+	color: blue;
+	font-weight: bold;
+	margin-left: 13.5em; }
+#reset {
+	margin-top: 4em;
+	background-color: yellow;
+	color: blue;
+	font-weight: bold;
+	margin-left: 0.5em;}
+#para{
+	margin-left: 1em;
+}
+form {
+	margin-bottom: 4em;
+	}
+	.panel-heading .title:after {
+font-family: 'Glyphicons Halflings';  
+content: "\e114";    
+float: right;        
+color: gray;
+}		
+.panel-heading .title.collapsed:after {
+	content: "\e080"; 
+}
+article, aside, figure, footer, header, hgroup, menu, nav, section { display: block; }
